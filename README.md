@@ -17,7 +17,7 @@ docker-compose exec kafka kafka-topics --list --bootstrap-server kafka:29092
  docker-compose exec kafka bash -c "
   kafka-console-producer \
   --bootstrap-server kafka:9092 \
-  --topic bcs_events \         
+  --topic my_events \         
   --property 'parse.key=true' \
   --property 'key.separator=:' < messages.txt"
 ```
