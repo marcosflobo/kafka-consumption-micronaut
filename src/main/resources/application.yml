@@ -1,0 +1,16 @@
+micronaut:
+  application:
+    name: helloKafkaConsumer
+netty:
+  default:
+    allocator:
+      max-order: 3
+
+---
+kafka:
+  bootstrap:
+    servers: localhost:29092
+  consumer:
+    id: ${KAFKA_CONSUMER_ID:hello-kafka-consumer-id}
+    group: ${KAFKA_CONSUMER_GROUP:hello-kafka-consumer}
+    auto-offset-reset: ${AUTO_OFFSET_RESET_CONFIG:earliest}
