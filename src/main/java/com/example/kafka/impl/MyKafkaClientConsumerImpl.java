@@ -18,7 +18,7 @@ public class MyKafkaClientConsumerImpl implements MyKafkaClientConsumer {
     }
 
     @Override
-    @Topic("bcs_events")
+    @Topic("my_events")
     public void readWhatEver(String message) {
         log.info("Message received: {}!", message);
         memoryService.store(message);
